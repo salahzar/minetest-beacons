@@ -30,8 +30,9 @@ Changelog:
 	-Added Blue Beacon
 	-Added Purple Beacon
 	-Added Green Beacon
-- Simplified to only have 1 blue beacon Type (Salahzar)
+- March 2018 Simplified to only have 1 blue beacon Type (Salahzar)
   - for didactical scope.
+  - restructuring modules 
 
 License:
 WTFPL (see below)
