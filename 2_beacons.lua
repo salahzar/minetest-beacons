@@ -35,7 +35,7 @@ end
 
 function Beacons.list(self)
 
-  local ret = "Fari:\n"
+  local ret = ""
   for k,v in pairs(self.table) do
     -- shows only key,values where v is 1
     if(v==1) then
@@ -43,6 +43,14 @@ function Beacons.list(self)
     end
   end
   return ret
+end
+
+function Beacons.count(self)
+  local count = 0 
+  for k,v in pairs(self.table) do
+    if(v==1) then count = count + 1 end
+  end
+  return count
 end
 
 beacons = Beacons.new()
