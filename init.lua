@@ -2,6 +2,7 @@
 -- con effetti speciali e raggio laser fino a 180 blocchi di altezza
 
 -- nome e path di questa mod
+debug = true
 modname = minetest.get_current_modname()
 modpath = minetest.get_modpath(modname)
 

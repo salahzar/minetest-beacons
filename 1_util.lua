@@ -1,7 +1,7 @@
 -- scrive informazione di "debug"
 function info(str)
   local str = "("..modname..") INFO: "..str 
-  print(str)
+  if debug == nil then  print(str) end
   minetest.chat_send_all(str)
 end
 

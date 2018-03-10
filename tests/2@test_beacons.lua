@@ -1,14 +1,9 @@
-luaunit = require("luaunit")
-
-dofile("tests/0_mocks.lua")
-dofile("1_util.lua")
-dofile("2_beacons.lua")
-
 
 local pos = {x=1,y=2,z=3}
 local pos1 = {x=5,y=6,z=7}
 
-function testInsert()
+TestBeacons = {}
+function TestBeacons:test_add()
   local beacons = Beacons.new()
   
   beacons:add(pos)
@@ -22,7 +17,7 @@ function testInsert()
   luaunit.assertEquals(beacons:exists(pos1),true)
 end
 
-function testDelete()
+function TestBeacons:test_del()
   local beacons = Beacons.new()
   beacons:add(pos)
   beacons:add(pos1)
@@ -40,7 +35,7 @@ function testDelete()
   
 end
 
-function testList()
+function TestBeacons:test_list()
   local beacons = Beacons.new()
   beacons:add(pos)
   beacons:add(pos1)
@@ -48,7 +43,4 @@ function testList()
   beacons:del(pos)
   luaunit.assertEquals(countLines(beacons:list()),1)
 end
-  
-  
-
-os.exit( luaunit.LuaUnit.run() )
+ 

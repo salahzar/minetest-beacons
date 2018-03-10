@@ -6,7 +6,6 @@ minetest.register_abm({
     interval = 1,
     chance = 2,
     action = function(pos, node)
-
       minetest.add_particlespawner(
         32, --amount
         4, --time
@@ -34,11 +33,9 @@ minetest.register_abm({
     chance = 1,
     action = function(pos)
       if (beacons:exists(pos)) then return end
-
       beacons:add(pos)
       -- this was original
       pos.y = pos.y + 1
-
       minetest.add_node(pos, {name=modname..":bluebase"})
       for i=1,179 do
         minetest.add_node({x=pos.x, y=pos.y+i, z=pos.z}, {name=modname..":bluebeam"})
